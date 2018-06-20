@@ -1,4 +1,52 @@
-body {
-  font-family: Helvetica, sans-serif;
-  color: #333;
+.hero {
+  background-color: black;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-bottom: 0px;
+}
+
+.first {
+  margin-top: 0px;
+  background-color: white;
+  height: 100vh;
+  min-width: 100vw;
+}
+
+.screen {
+  height: 40vh;
+  width: 45vw;
+  border: solid black 20px;
+  border-radius: 20px 20px 0 0;
+  margin-top: 20vh;
+}
+
+.edge{
+  height: 10vh;
+  width: 45vw;
+  background-color: grey;
+  border-radius: 0 0 20px 20px;
+  border: #696969	 solid 2px;
+}
+
+.stand {
+  height: 8vh;
+  width: 7vw;
+  background-color: grey;
+  margin-left: 19vw;
+  border-left: #696969	 solid 2px;
+  border-right: #696969	 solid 2px;
+  border-radius: -50px;
+}
+
+.base {
+  height: 4vh;
+  width: 15vw;
+  background-color: grey;
+  margin-left: 15vw;
+  border-radius: 20px;
+  border: #696969 solid 2px;
+}
+
+img {
+  visibility: hidden;
 }
