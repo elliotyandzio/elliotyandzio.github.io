@@ -13,18 +13,18 @@ button {
 
 .frame {
   background-color: #E5E5E5;
-  border: 1px #E5E5E5 solid;
+  border: 1px black solid;
   border-radius: 0 0 15px 15px;
   height: 8vh;
 }
 
 .stand {
-  background-color: #d6d4d4;
+  background-color: #E5E5E5;
   height: 4vh;
   margin: 0 auto;
   width: 7vw;
-  border-right: 1px #d6d4d4 solid;
-  border-left: 1px #d6d4d4 solid;
+  border-right: 1px black solid;
+  border-left: 1px black solid;
 }
 
 .base {
@@ -32,6 +32,6 @@ button {
   height: 1vh;
   margin: 0 auto;
   width: 10vw;
-  border: 1px #E5E5E5 solid;
+  border: 1px black solid;
   border-radius: 15px;
 }
