@@ -12,8 +12,8 @@ button {
 }
 
 .frame {
-  background-color: #E5E5E5;
-  border: 1px black solid;
+  background-color: rgb(229, 229, 229);
+  border: 1px rgb(229, 229, 229) solid;
   border-radius: 0 0 15px 15px;
   height: 8vh;
 }
@@ -28,10 +28,10 @@ button {
 }
 
 .base {
-  background-color: #E5E5E5;
+  background-color: rgb(229, 229, 229);
   height: 1vh;
   margin: 0 auto;
   width: 10vw;
-  border: 1px black solid;
+  border: 1px rgb(229, 229, 229) solid;
   border-radius: 15px;
 }
