@@ -4,35 +4,30 @@ $(document).ready(function() {
   // START OF CODE TO CHANGE THE COLOUR OF THE NAVBAR DEPENDING ON THE SECTION
   $(document).on('scroll', function() {
     if( $(this).scrollTop() >= ($('#project4').position().top) - navBarSize ){
-      $( "nav" ).removeClass( "is-black" );
-      $( "nav" ).removeClass( "is-danger" );
-      $( "nav" ).addClass( "is-white" );
+      $( "div.navbar-brand" ).css('background-color', 'white');
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
-      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-danger" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-red" );
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-white" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
     }
     if( $(this).scrollTop() >= ($('#project3').position().top) - navBarSize ){
-      $( "nav" ).removeClass( "is-white" );
-      $( "nav" ).addClass( "is-danger" );
+      $( "div.navbar-brand" ).css('background-color', '#DB3B35');
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-white" );
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
-      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-danger" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-red" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
     }
     if( $(this).scrollTop() >= ($('#project2').position().top) - navBarSize ){
-      $( "nav" ).removeClass( "is-danger" );
-      $( "nav" ).addClass( "is-black" );
-      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-danger" );
+      $( "div.navbar-brand" ).css('background-color', 'black');
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-red" );
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-white" );
     }
     if( $(this).scrollTop() >= ($('#project1').position().top) - navBarSize ){
-      $( "nav" ).removeClass( "is-black" );
-      $( "nav" ).addClass( "is-white" );
+      $( "div.navbar-brand" ).css('background-color', 'white');
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-white" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );

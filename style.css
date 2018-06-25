@@ -6,6 +6,20 @@ button {
   font-family: 'Dosis', sans-serif;
 }
 
+.has-background-red {
+  background-color: #DB3B35;
+}
+
+.has-text-red {
+  color: #DB3B35;
+}
+
+.is-red {
+  color: white;
+  background-color: #DB3B35;
+  border-color: #DB3B35;
+}
+
 .navbar-item::hover {
   font-weight: bold;
 }
