@@ -1,54 +1,52 @@
 $(document).ready(function() {
 
-  var $win = $(window);
-  var winH = $win.height();   // Get the window height.
-  var winH1 = (winH - 52);
-  var winH2 = ((winH * 2) - 52);
-  var winH3 = ((winH * 3) - 52);
+  const navBarSize = 52;
+  // START OF CODE TO CHANGE THE COLOUR OF THE NAVBAR DEPENDING ON THE SECTION
+  $(document).on('scroll', function() {
+    if( $(this).scrollTop() >= ($('#project4').position().top) - navBarSize ){
+      $( "nav" ).removeClass( "is-black" );
+      $( "nav" ).removeClass( "is-danger" );
+      $( "nav" ).addClass( "is-white" );
+    }
+    if( $(this).scrollTop() >= ($('#project3').position().top) - navBarSize ){
+      $( "nav" ).removeClass( "is-white" );
+      $( "nav" ).addClass( "is-danger" );
+    }
+    if( $(this).scrollTop() >= ($('#project2').position().top) - navBarSize ){
+      $( "nav" ).removeClass( "is-danger" );
+      $( "nav" ).addClass( "is-black" );
+    }
+    if( $(this).scrollTop() >= ($('#project1').position().top) - navBarSize ){
+      $( "nav" ).removeClass( "is-black" );
+      $( "nav" ).addClass( "is-white" );
+    }
+  });
+  // END OF CODE TO CHANGE THE COLOUR OF THE NAVBAR DEPENDING ON THE SECTION
 
-    $win.on("scroll", function () {
-      if ($(this).scrollTop() < winH1) {
-        $( "nav" ).removeClass( "is-danger" );
-        $( "nav" ).removeClass( "is-black" );
-        $( "nav" ).addClass( "is-white" );
-      }
-      if ($(this).scrollTop() > winH1) {
-        $( "nav" ).removeClass( "is-white" );
-        $( "nav" ).addClass( "is-danger" );
-      }
-      if ($(this).scrollTop() > winH2) {
-        $( "nav" ).removeClass( "is-danger" );
-        $( "nav" ).addClass( "is-black" );
-      }
-      if($(this).scrollTop() > winH3) {
-        $( "nav" ).removeClass( "is-black" );
-        $( "nav" ).addClass( "is-white" );
-      }
-    }).on("resize", function(){ // If the user resizes the window
-       winH = $(this).height(); // you'll need the new height value
-    });
+  //START OF THE CODE TO SCROLL TO THE DESIRED PROJECT WHEN NAVBAR ITEM CLICKED
+  $("#one").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#project1").offset().top
+    }, 2000);
+  });
 
-    $("#one").click(function() {
-      $('html, body').animate({
-          scrollTop: $("#project1").offset().top
-        }, 2000);
-    });
+  $("#two").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#project2").offset().top
+    }, 2000);
+  });
 
-    $("#two").click(function() {
-      $('html, body').animate({
-          scrollTop: $("#project2").offset().top
-        }, 2000);
-    });
+  $("#three").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#project3").offset().top
+    }, 2000);
+  });
 
-    $("#three").click(function() {
-      $('html, body').animate({
-          scrollTop: $("#project3").offset().top
-        }, 2000);
-    });
+  $("#four").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#project4").offset().top
+    }, 2000);
+  });
+  //END OF THE CODE TO SCROLL TO THE DESIRED PROJECT WHEN NAVBAR ITEM CLICKED
 
-    $("#four").click(function() {
-      $('html, body').animate({
-          scrollTop: $("#project4").offset().top
-        }, 2000);
-    });
 });
