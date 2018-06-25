@@ -7,18 +7,41 @@ $(document).ready(function() {
       $( "nav" ).removeClass( "is-black" );
       $( "nav" ).removeClass( "is-danger" );
       $( "nav" ).addClass( "is-white" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-danger" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-white" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
     }
     if( $(this).scrollTop() >= ($('#project3').position().top) - navBarSize ){
       $( "nav" ).removeClass( "is-white" );
       $( "nav" ).addClass( "is-danger" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-white" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-danger" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).hover(function () {
+      })
     }
     if( $(this).scrollTop() >= ($('#project2').position().top) - navBarSize ){
       $( "nav" ).removeClass( "is-danger" );
       $( "nav" ).addClass( "is-black" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-danger" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-black" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-black" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-white" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).hover(function () {
+        $(this).addClass('has-text-black');
+      })
     }
     if( $(this).scrollTop() >= ($('#project1').position().top) - navBarSize ){
       $( "nav" ).removeClass( "is-black" );
       $( "nav" ).addClass( "is-white" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-white" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
     }
   });
   // END OF CODE TO CHANGE THE COLOUR OF THE NAVBAR DEPENDING ON THE SECTION
@@ -59,5 +82,9 @@ $(document).ready(function() {
     $(this).removeClass("has-text-weight-bold");
   })
   //END OF WHEN NAV-ITEM HOVERED ADD BOLD CLASS, WHEN OUTSIDE OF HOVER REMOVE CLASS BOLD
+
+  $('.navbar-burger').click(function() {
+  $('#navbarMenuHeroA, .navbar-burger').toggleClass('is-active');
+});
 
 });
