@@ -21,8 +21,6 @@ $(document).ready(function() {
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-danger" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
-      $( "#navbarMenuHeroA, .navbar-burger, a" ).hover(function () {
-      })
     }
     if( $(this).scrollTop() >= ($('#project2').position().top) - navBarSize ){
       $( "nav" ).removeClass( "is-danger" );
@@ -31,9 +29,6 @@ $(document).ready(function() {
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-white" );
-      $( "#navbarMenuHeroA, .navbar-burger, a" ).hover(function () {
-        $(this).addClass('has-text-black');
-      })
     }
     if( $(this).scrollTop() >= ($('#project1').position().top) - navBarSize ){
       $( "nav" ).removeClass( "is-black" );
