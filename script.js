@@ -49,4 +49,15 @@ $(document).ready(function() {
   });
   //END OF THE CODE TO SCROLL TO THE DESIRED PROJECT WHEN NAVBAR ITEM CLICKED
 
+
+  //START OF WHEN NAV-ITEM HOVERED ADD BOLD CLASS, WHEN OUTSIDE OF HOVER REMOVE CLASS BOLD
+  $(".navbar-item").mouseover(function() {
+    $(this).addClass("has-text-weight-bold");
+  })
+
+  $(".navbar-item").mouseleave(function() {
+    $(this).removeClass("has-text-weight-bold");
+  })
+  //END OF WHEN NAV-ITEM HOVERED ADD BOLD CLASS, WHEN OUTSIDE OF HOVER REMOVE CLASS BOLD
+
 });

@@ -6,6 +6,9 @@ button {
   font-family: 'Dosis', sans-serif;
 }
 
+.navbar-item::hover {
+  font-weight: bold;
+}
 
 .screen {
   border: 16px #4C4C4C solid;
