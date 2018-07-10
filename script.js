@@ -3,17 +3,27 @@ $(document).ready(function() {
   const navBarSize = 52;
   // START OF CODE TO CHANGE THE COLOUR OF THE NAVBAR DEPENDING ON THE SECTION
   $(document).on('scroll', function() {
-    if( $(this).scrollTop() >= ($('#project4').position().top) - navBarSize ){
+    if( $(this).scrollTop() >= ($('#personalBio').position().top) - navBarSize ){
       $( "div.navbar-brand" ).css('background-color', 'white');
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-light" );
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-red" );
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-white" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
     }
+    if( $(this).scrollTop() >= ($('#project4').position().top) - navBarSize ){
+      $( "div.navbar-brand" ).css('background-color', 'white');
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-red" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-light" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
+      $( "#navbarMenuHeroA, .navbar-burger, a" ).removeClass( "has-text-white" );
+    }
     if( $(this).scrollTop() >= ($('#project3').position().top) - navBarSize ){
       $( "div.navbar-brand" ).css('background-color', '#DB3B35');
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-white" );
+      $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-light" );
       $( "#navbarMenuHeroA, .navbar-burger" ).removeClass( "has-background-black" );
       $( "#navbarMenuHeroA, .navbar-burger" ).addClass( "has-background-red" );
       $( "#navbarMenuHeroA, .navbar-burger, a" ).addClass( "has-text-black" );
@@ -37,6 +47,12 @@ $(document).ready(function() {
   // END OF CODE TO CHANGE THE COLOUR OF THE NAVBAR DEPENDING ON THE SECTION
 
   //START OF THE CODE TO SCROLL TO THE DESIRED PROJECT WHEN NAVBAR ITEM CLICKED
+  $("#bio").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#personalBio").offset().top
+    }, 2000);
+  });
+
   $("#one").click(function() {
     $('html, body').animate({
       scrollTop: $("#project1").offset().top

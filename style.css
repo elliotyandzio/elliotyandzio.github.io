@@ -53,3 +53,31 @@ button {
   border: 1px rgb(229, 229, 229) solid;
   border-radius: 15px;
 }
+
+.circle {
+  height: 6vh;
+  width: 6vh;
+  border-radius: 30px;
+}
+
+.circle:hover {
+  height: 6vh;
+  width: 6vh;
+  border-radius: 30px;
+  background-color: grey;
+}
+
+.middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+img {
+  height:50%;
+  width:50%;
+}
+
+.level-left.is-flex-mobile {
+  justify-content: flex-start;
+}
